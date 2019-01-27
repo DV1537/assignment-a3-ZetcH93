@@ -38,3 +38,28 @@ double Point::distance(Shape &sObject)
 	double distance = sqrt(pow(xDistance, 2.0) + pow(yDistance, 2.0));
 	return distance;
 }
+
+Point& Point::operator=(const Point& point)
+{
+	if (this == &point)
+	{
+		return *this;
+	}
+
+	if (nrOfPoints > 0)
+	{
+		delete[] xCord;
+		delete[] yCord;
+	}
+	xCord = new double[nrOfPoints];
+	yCord = new double[nrOfPoints];
+
+	for (int index = 0; index < nrOfPoints; index++)
+	{
+		xCord[index] = point.xCord[index];
+		yCord[index] = point.yCord[index];
+	}
+	return *this;
+}
+
+

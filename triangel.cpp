@@ -77,3 +77,27 @@ double Triangel::distance(Shape &sObject)
 	return distance;
 
 }
+
+Triangel& Triangel::operator=(const Triangel &triangle)
+{
+	if (this == &triangle)
+	{
+		return *this;
+	}
+	if (nrOfPoints > 0)
+	{
+		delete[] xCord;
+		delete[] yCord;
+	}
+	nrOfPoints = triangle.nrOfPoints;
+	xCord = new double[nrOfPoints];
+	yCord = new double[nrOfPoints];
+
+	for (int index = 0; index < nrOfPoints; index++)
+	{
+		xCord[index] = triangle.xCord[index];
+		yCord[index] = triangle.yCord[index];
+	}
+	return *this;
+
+}

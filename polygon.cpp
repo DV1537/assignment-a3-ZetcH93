@@ -75,7 +75,7 @@ double Polygon::area()
 			area += (xCord[j] + xCord[i]) * (yCord[j] - yCord[i]);
 			j = i;
 		}
-		area = std::abs(area / 2.0);
+		area = abs(area / 2.0);
 	}
 	else
 		area = -1.0;
@@ -129,3 +129,29 @@ double Polygon::distance(Shape &sObject)
 	double distance = sqrt(pow(xDistance, 2.0) + pow(yDistance, 2.0));
 	return distance;
 }
+
+
+
+Polygon& Polygon::operator=(const Polygon &polygon)
+{
+	if (this == &polygon)
+	{
+		return *this;
+	}
+	if (nrOfPoints > 0)
+	{
+		delete[] xCord;
+		delete[] yCord;
+	}
+	nrOfPoints = polygon.nrOfPoints;
+	xCord = new double[nrOfPoints];
+	yCord = new double[nrOfPoints];
+
+	for (int index = 0; index < nrOfPoints; index++)
+	{
+		xCord[index] = polygon.xCord[index];
+		yCord[index] = polygon.yCord[index];
+	}
+	return *this;
+}
+

@@ -40,3 +40,28 @@ double Line::distance(Shape &sObject)
 	double distance = sqrt(pow(xDistance, 2.0) + pow(yDistance, 2.0));
 	return distance;
 }
+
+
+Line& Line::operator=(const Line &line)
+{
+	if (this == &line)
+	{
+		return *this;
+	}
+
+	if (nrOfPoints > 0)
+	{
+		delete[] xCord;
+		delete[] yCord;
+	}
+	xCord = new double[nrOfPoints];
+	yCord = new double[nrOfPoints];
+
+	for (int index = 0; index < nrOfPoints; index++)
+	{
+		xCord[index] = line.xCord[index];
+		yCord[index] = line.yCord[index];
+	}
+	return *this;
+}
+

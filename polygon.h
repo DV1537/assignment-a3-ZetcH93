@@ -10,11 +10,12 @@
 class Polygon : public Shape
 {
 
+public:
+
+
 	double *xCord = nullptr;
 	double *yCord = nullptr;
 	int nrOfPoints = 0;
-
-public:
 
 	Polygon(double *xCord, double *yCord, int nrOfPoints);
 	string getType() override;
@@ -23,5 +24,7 @@ public:
 	ShapePosition position() override;
 	bool isConvex() override;
 	double distance(Shape &sObject) override;
+	Polygon& operator=(const Polygon& polygon);
+	
 
 };

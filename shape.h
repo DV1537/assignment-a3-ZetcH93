@@ -3,6 +3,7 @@
 #include <iostream>
 #include <string>
 #include <cmath>
+#include <fstream>
 using namespace std;
 
 
@@ -31,6 +32,8 @@ public:
 	virtual bool isConvex();					// returns true if shape is convex
 	virtual double distance(Shape &s) = 0;		//returns distance to the center of another shape
 
+	virtual Shape &operator+(const Shape &shape);
+	friend ostream &operator<<(ostream &streamobj, const Shape &shape);
 
 
 

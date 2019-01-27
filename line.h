@@ -9,16 +9,18 @@
 
 class Line : public Shape
 {
+
+public:
+
 	double *xCord = nullptr;
 	double *yCord = nullptr;
 	int nrOfPoints = 0;
-
-public:
 
 	Line(double *xCord, double *yCord, int nrOfPoints);
 	string getType() override;
 
 	ShapePosition position() override;
 	double distance(Shape &sObject) override;
-
+	Line& operator=(const Line& line);
+	
 };

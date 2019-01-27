@@ -8,17 +8,18 @@
 class Point : public Shape
 {
 
+
+public:
+
 	double *xCord = nullptr;
 	double *yCord = nullptr;
 	int nrOfPoints = 0;
-
-
-public:
 
 	Point(double *xCord, double *yCord, int nrOfPoints);
 	string getType() override;
 	
 	ShapePosition position() override;
 	double distance(Shape &sObject) override;
+	Point& operator=(const Point& point);
 
 };

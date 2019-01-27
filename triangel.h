@@ -9,12 +9,13 @@
 
 class Triangel : public Shape
 {
+
+public:
+
 	double *xCord = nullptr;
 	double *yCord = nullptr;
 	int nrOfPoints = 0;
 
-	
-public:
 
 	Triangel(double *xCord, double *yCord, int nrOfPoints);
 	string getType() override;
@@ -23,5 +24,6 @@ public:
 	ShapePosition position() override;
 	bool isConvex() override;
 	double distance(Shape &sObject) override;
+	Triangel& operator=(const Triangel& triangle);
 
 };
