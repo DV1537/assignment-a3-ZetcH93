@@ -5,21 +5,21 @@
 Polygon operator+(Polygon& ls, Polygon& rs)
 {
 	int i = 0;
-	int newVerticesAmount = ls.nrOfPoints + rs.nrOfPoints;
+	int newVerticesAmount = ls.getPoints() + rs.getPoints();
 
 	double *newXCord = new double[newVerticesAmount];
 	double *newYCord = new double[newVerticesAmount];
 
-	for (int index = 0; index < ls.nrOfPoints; index++)
+	for (int index = 0; index < ls.getPoints(); index++)
 	{
-		newXCord[index] = ls.xCord[index];
-		newYCord[index] = ls.yCord[index];
+		newXCord[index] = ls.getXcord()[index];
+		newYCord[index] = ls.getYcord()[index];
 	}
 
-	for (int index = ls.nrOfPoints; index < newVerticesAmount; index++)
+	for (int index = ls.getPoints(); index < newVerticesAmount; index++)
 	{
-		newXCord[index] = rs.xCord[i];
-		newYCord[index] = rs.yCord[i];
+		newXCord[index] = rs.getXcord()[i];
+		newYCord[index] = rs.getYcord()[i];
 		i++;
 	}
 
@@ -32,21 +32,21 @@ Polygon operator+(Polygon& ls, Polygon& rs)
 Polygon operator+(Polygon& ls, Triangel& rs)
 {
 	int i = 0;
-	int newVerticesAmount = ls.nrOfPoints + rs.nrOfPoints;
+	int newVerticesAmount = ls.getPoints() + rs.getPoints();
 
 	double *newXCord = new double[newVerticesAmount];
 	double *newYCord = new double[newVerticesAmount];
 
-	for (int index = 0; index < ls.nrOfPoints; index++)
+	for (int index = 0; index < ls.getPoints(); index++)
 	{
-		newXCord[index] = ls.xCord[index];
-		newYCord[index] = ls.yCord[index];
+		newXCord[index] = ls.getXcord()[index];
+		newYCord[index] = ls.getYcord()[index];
 	}
 
-	for (int index = ls.nrOfPoints; index < newVerticesAmount; index++)
+	for (int index = ls.getPoints(); index < newVerticesAmount; index++)
 	{
-		newXCord[index] = rs.xCord[i];
-		newYCord[index] = rs.yCord[i];
+		newXCord[index] = rs.getXcord()[i];
+		newYCord[index] = rs.getYcord()[i];
 		i++;
 	}
 
@@ -59,21 +59,21 @@ Polygon operator+(Polygon& ls, Triangel& rs)
 Polygon operator+(Triangel& ls, Polygon& rs)
 {
 	int i = 0;
-	int newVerticesAmount = ls.nrOfPoints + rs.nrOfPoints;
+	int newVerticesAmount = ls.getPoints() + rs.getPoints();
 
 	double *newXCord = new double[newVerticesAmount];
 	double *newYCord = new double[newVerticesAmount];
 
-	for (int index = 0; index < ls.nrOfPoints; index++)
+	for (int index = 0; index < ls.getPoints(); index++)
 	{
-		newXCord[index] = ls.xCord[index];
-		newYCord[index] = ls.yCord[index];
+		newXCord[index] = ls.getXcord()[index];
+		newYCord[index] = ls.getYcord()[index];
 	}
 
-	for (int index = ls.nrOfPoints; index < newVerticesAmount; index++)
+	for (int index = ls.getPoints(); index < newVerticesAmount; index++)
 	{
-		newXCord[index] = rs.xCord[i];
-		newYCord[index] = rs.yCord[i];
+		newXCord[index] = rs.getXcord()[i];
+		newYCord[index] = rs.getYcord()[i];
 		i++;
 	}
 
@@ -87,21 +87,21 @@ Polygon operator+(Triangel& ls, Polygon& rs)
 Polygon operator+(Polygon& ls, Line& rs)
 {
 	int i = 0;
-	int newVerticesAmount = ls.nrOfPoints + rs.nrOfPoints;
+	int newVerticesAmount = ls.getPoints() + rs.getPoints();
 
 	double *newXCord = new double[newVerticesAmount];
 	double *newYCord = new double[newVerticesAmount];
 
-	for (int index = 0; index < ls.nrOfPoints; index++)
+	for (int index = 0; index < ls.getPoints(); index++)
 	{
-		newXCord[index] = ls.xCord[index];
-		newYCord[index] = ls.yCord[index];
+		newXCord[index] = ls.getXcord()[index];
+		newYCord[index] = ls.getYcord()[index];
 	}
 
-	for (int index = ls.nrOfPoints; index < newVerticesAmount; index++)
+	for (int index = ls.getPoints(); index < newVerticesAmount; index++)
 	{
-		newXCord[index] = rs.xCord[i];
-		newYCord[index] = rs.yCord[i];
+		newXCord[index] = rs.getXcord()[i];
+		newYCord[index] = rs.getYcord()[i];
 		i++;
 	}
 
@@ -114,21 +114,21 @@ Polygon operator+(Polygon& ls, Line& rs)
 Polygon operator+(Line& ls, Polygon& rs)
 {
 	int i = 0;
-	int newVerticesAmount = ls.nrOfPoints + rs.nrOfPoints;
+	int newVerticesAmount = ls.getPoints() + rs.getPoints();
 
 	double *newXCord = new double[newVerticesAmount];
 	double *newYCord = new double[newVerticesAmount];
 
-	for (int index = 0; index < ls.nrOfPoints; index++)
+	for (int index = 0; index < ls.getPoints(); index++)
 	{
-		newXCord[index] = ls.xCord[index];
-		newYCord[index] = ls.yCord[index];
+		newXCord[index] = ls.getXcord()[index];
+		newYCord[index] = ls.getYcord()[index];
 	}
 
-	for (int index = ls.nrOfPoints; index < newVerticesAmount; index++)
+	for (int index = ls.getPoints(); index < newVerticesAmount; index++)
 	{
-		newXCord[index] = rs.xCord[i];
-		newYCord[index] = rs.yCord[i];
+		newXCord[index] = rs.getXcord()[i];
+		newYCord[index] = rs.getYcord()[i];
 		i++;
 	}
 
@@ -141,21 +141,21 @@ Polygon operator+(Line& ls, Polygon& rs)
 Polygon operator+(Polygon& ls, Point& rs)
 {
 	int i = 0;
-	int newVerticesAmount = ls.nrOfPoints + rs.nrOfPoints;
+	int newVerticesAmount = ls.getPoints() + rs.getPoints();
 
 	double *newXCord = new double[newVerticesAmount];
 	double *newYCord = new double[newVerticesAmount];
 
-	for (int index = 0; index < ls.nrOfPoints; index++)
+	for (int index = 0; index < ls.getPoints(); index++)
 	{
-		newXCord[index] = ls.xCord[index];
-		newYCord[index] = ls.yCord[index];
+		newXCord[index] = ls.getXcord()[index];
+		newYCord[index] = ls.getYcord()[index];
 	}
 
-	for (int index = ls.nrOfPoints; index < newVerticesAmount; index++)
+	for (int index = ls.getPoints(); index < newVerticesAmount; index++)
 	{
-		newXCord[index] = rs.xCord[i];
-		newYCord[index] = rs.yCord[i];
+		newXCord[index] = rs.getXcord()[i];
+		newYCord[index] = rs.getYcord()[i];
 		i++;
 	}
 
@@ -168,21 +168,21 @@ Polygon operator+(Polygon& ls, Point& rs)
 Polygon operator+(Point& ls, Polygon& rs)
 {
 	int i = 0;
-	int newVerticesAmount = ls.nrOfPoints + rs.nrOfPoints;
+	int newVerticesAmount = ls.getPoints() + rs.getPoints();
 
 	double *newXCord = new double[newVerticesAmount];
 	double *newYCord = new double[newVerticesAmount];
 
-	for (int index = 0; index < ls.nrOfPoints; index++)
+	for (int index = 0; index < ls.getPoints(); index++)
 	{
-		newXCord[index] = ls.xCord[index];
-		newYCord[index] = ls.yCord[index];
+		newXCord[index] = ls.getXcord()[index];
+		newYCord[index] = ls.getYcord()[index];
 	}
 
-	for (int index = ls.nrOfPoints; index < newVerticesAmount; index++)
+	for (int index = ls.getPoints(); index < newVerticesAmount; index++)
 	{
-		newXCord[index] = rs.xCord[i];
-		newYCord[index] = rs.yCord[i];
+		newXCord[index] = rs.getXcord()[i];
+		newYCord[index] = rs.getYcord()[i];
 		i++;
 	}
 
@@ -195,21 +195,21 @@ Polygon operator+(Point& ls, Polygon& rs)
 Polygon operator+(Triangel &ls, Triangel& rs)
 {
 	int i = 0;
-	int newVerticesAmount = ls.nrOfPoints + rs.nrOfPoints;
+	int newVerticesAmount = ls.getPoints() + rs.getPoints();
 
 	double *newXCord = new double[newVerticesAmount];
 	double *newYCord = new double[newVerticesAmount];
 
-	for (int index = 0; index < ls.nrOfPoints; index++)
+	for (int index = 0; index < ls.getPoints(); index++)
 	{
-		newXCord[index] = ls.xCord[index];
-		newYCord[index] = ls.yCord[index];
+		newXCord[index] = ls.getXcord()[index];
+		newYCord[index] = ls.getYcord()[index];
 	}
 
-	for (int index = ls.nrOfPoints; index < newVerticesAmount; index++)
+	for (int index = ls.getPoints(); index < newVerticesAmount; index++)
 	{
-		newXCord[index] = rs.xCord[i];
-		newYCord[index] = rs.yCord[i];
+		newXCord[index] = rs.getXcord()[i];
+		newYCord[index] = rs.getYcord()[i];
 		i++;
 	}
 
@@ -222,21 +222,21 @@ Polygon operator+(Triangel &ls, Triangel& rs)
 Polygon operator+(Triangel& ls, Line& rs)
 {
 	int i = 0;
-	int newVerticesAmount = ls.nrOfPoints + rs.nrOfPoints;
+	int newVerticesAmount = ls.getPoints() + rs.getPoints();
 
 	double *newXCord = new double[newVerticesAmount];
 	double *newYCord = new double[newVerticesAmount];
 
-	for (int index = 0; index < ls.nrOfPoints; index++)
+	for (int index = 0; index < ls.getPoints(); index++)
 	{
-		newXCord[index] = ls.xCord[index];
-		newYCord[index] = ls.yCord[index];
+		newXCord[index] = ls.getXcord()[index];
+		newYCord[index] = ls.getYcord()[index];
 	}
 
-	for (int index = ls.nrOfPoints; index < newVerticesAmount; index++)
+	for (int index = ls.getPoints(); index < newVerticesAmount; index++)
 	{
-		newXCord[index] = rs.xCord[i];
-		newYCord[index] = rs.yCord[i];
+		newXCord[index] = rs.getXcord()[i];
+		newYCord[index] = rs.getYcord()[i];
 		i++;
 	}
 
@@ -249,21 +249,21 @@ Polygon operator+(Triangel& ls, Line& rs)
 Polygon operator+(Line& ls, Triangel& rs)
 {
 	int i = 0;
-	int newVerticesAmount = ls.nrOfPoints + rs.nrOfPoints;
+	int newVerticesAmount = ls.getPoints() + rs.getPoints();
 
 	double *newXCord = new double[newVerticesAmount];
 	double *newYCord = new double[newVerticesAmount];
 
-	for (int index = 0; index < ls.nrOfPoints; index++)
+	for (int index = 0; index < ls.getPoints(); index++)
 	{
-		newXCord[index] = ls.xCord[index];
-		newYCord[index] = ls.yCord[index];
+		newXCord[index] = ls.getXcord()[index];
+		newYCord[index] = ls.getYcord()[index];
 	}
 
-	for (int index = ls.nrOfPoints; index < newVerticesAmount; index++)
+	for (int index = ls.getPoints(); index < newVerticesAmount; index++)
 	{
-		newXCord[index] = rs.xCord[i];
-		newYCord[index] = rs.yCord[i];
+		newXCord[index] = rs.getXcord()[i];
+		newYCord[index] = rs.getYcord()[i];
 		i++;
 	}
 
@@ -276,21 +276,21 @@ Polygon operator+(Line& ls, Triangel& rs)
 Polygon operator+(Triangel& ls, Point& rs)
 {
 	int i = 0;
-	int newVerticesAmount = ls.nrOfPoints + rs.nrOfPoints;
+	int newVerticesAmount = ls.getPoints() + rs.getPoints();
 
 	double *newXCord = new double[newVerticesAmount];
 	double *newYCord = new double[newVerticesAmount];
 
-	for (int index = 0; index < ls.nrOfPoints; index++)
+	for (int index = 0; index < ls.getPoints(); index++)
 	{
-		newXCord[index] = ls.xCord[index];
-		newYCord[index] = ls.yCord[index];
+		newXCord[index] = ls.getXcord()[index];
+		newYCord[index] = ls.getYcord()[index];
 	}
 
-	for (int index = ls.nrOfPoints; index < newVerticesAmount; index++)
+	for (int index = ls.getPoints(); index < newVerticesAmount; index++)
 	{
-		newXCord[index] = rs.xCord[i];
-		newYCord[index] = rs.yCord[i];
+		newXCord[index] = rs.getXcord()[i];
+		newYCord[index] = rs.getYcord()[i];
 		i++;
 	}
 
@@ -303,21 +303,21 @@ Polygon operator+(Triangel& ls, Point& rs)
 Polygon operator+(Point& ls, Triangel& rs)
 {
 	int i = 0;
-	int newVerticesAmount = ls.nrOfPoints + rs.nrOfPoints;
+	int newVerticesAmount = ls.getPoints() + rs.getPoints();
 
 	double *newXCord = new double[newVerticesAmount];
 	double *newYCord = new double[newVerticesAmount];
 
-	for (int index = 0; index < ls.nrOfPoints; index++)
+	for (int index = 0; index < ls.getPoints(); index++)
 	{
-		newXCord[index] = ls.xCord[index];
-		newYCord[index] = ls.yCord[index];
+		newXCord[index] = ls.getXcord()[index];
+		newYCord[index] = ls.getYcord()[index];
 	}
 
-	for (int index = ls.nrOfPoints; index < newVerticesAmount; index++)
+	for (int index = ls.getPoints(); index < newVerticesAmount; index++)
 	{
-		newXCord[index] = rs.xCord[i];
-		newYCord[index] = rs.yCord[i];
+		newXCord[index] = rs.getXcord()[i];
+		newYCord[index] = rs.getYcord()[i];
 		i++;
 	}
 
@@ -330,21 +330,21 @@ Polygon operator+(Point& ls, Triangel& rs)
 Polygon operator+(Line& ls, Line& rs)
 {
 	int i = 0;
-	int newVerticesAmount = ls.nrOfPoints + rs.nrOfPoints;
+	int newVerticesAmount = ls.getPoints() + rs.getPoints();
 
 	double *newXCord = new double[newVerticesAmount];
 	double *newYCord = new double[newVerticesAmount];
 
-	for (int index = 0; index < ls.nrOfPoints; index++)
+	for (int index = 0; index < ls.getPoints(); index++)
 	{
-		newXCord[index] = ls.xCord[index];
-		newYCord[index] = ls.yCord[index];
+		newXCord[index] = ls.getXcord()[index];
+		newYCord[index] = ls.getYcord()[index];
 	}
 
-	for (int index = ls.nrOfPoints; index < newVerticesAmount; index++)
+	for (int index = ls.getPoints(); index < newVerticesAmount; index++)
 	{
-		newXCord[index] = rs.xCord[i];
-		newYCord[index] = rs.yCord[i];
+		newXCord[index] = rs.getXcord()[i];
+		newYCord[index] = rs.getYcord()[i];
 		i++;
 	}
 
@@ -358,21 +358,21 @@ Polygon operator+(Line& ls, Line& rs)
 Triangel operator+(Point& ls, Line& rs)
 {
 	int i = 0;
-	int newVerticesAmount = ls.nrOfPoints + rs.nrOfPoints;
+	int newVerticesAmount = ls.getPoints() + rs.getPoints();
 
 	double *newXCord = new double[newVerticesAmount];
 	double *newYCord = new double[newVerticesAmount];
 
-	for (int index = 0; index < ls.nrOfPoints; index++)
+	for (int index = 0; index < ls.getPoints(); index++)
 	{
-		newXCord[index] = ls.xCord[index];
-		newYCord[index] = ls.yCord[index];
+		newXCord[index] = ls.getXcord()[index];
+		newYCord[index] = ls.getYcord()[index];
 	}
 
-	for (int index = ls.nrOfPoints; index < newVerticesAmount; index++)
+	for (int index = ls.getPoints(); index < newVerticesAmount; index++)
 	{
-		newXCord[index] = rs.xCord[i];
-		newYCord[index] = rs.yCord[i];
+		newXCord[index] = rs.getXcord()[i];
+		newYCord[index] = rs.getYcord()[i];
 		i++;
 	}
 
@@ -386,21 +386,21 @@ Triangel operator+(Point& ls, Line& rs)
 Triangel operator+(Line &ls, Point &rs)
 {
 	int i = 0;
-	int newVerticesAmount = ls.nrOfPoints + rs.nrOfPoints;
+	int newVerticesAmount = ls.getPoints() + rs.getPoints();
 
 	double *newXCord = new double[newVerticesAmount];
 	double *newYCord = new double[newVerticesAmount];
 
-	for (int index = 0; index < ls.nrOfPoints; index++)
+	for (int index = 0; index < ls.getPoints(); index++)
 	{
-		newXCord[index] = ls.xCord[index];
-		newYCord[index] = ls.yCord[index];
+		newXCord[index] = ls.getXcord()[index];
+		newYCord[index] = ls.getYcord()[index];
 	}
 
-	for (int index = ls.nrOfPoints; index < newVerticesAmount; index++)
+	for (int index = ls.getPoints(); index < newVerticesAmount; index++)
 	{
-		newXCord[index] = rs.xCord[i];
-		newYCord[index] = rs.yCord[i];
+		newXCord[index] = rs.getXcord()[i];
+		newYCord[index] = rs.getYcord()[i];
 		i++;
 	}
 
@@ -415,21 +415,21 @@ Line operator+(Point &ls, Point &rs)
 {
 
 	int i = 0;
-	int newVerticesAmount = ls.nrOfPoints + rs.nrOfPoints;
+	int newVerticesAmount = ls.getPoints() + rs.getPoints();
 
 	double *newXCord = new double[newVerticesAmount];
 	double *newYCord = new double[newVerticesAmount];
 
-	for (int index = 0; index < ls.nrOfPoints; index++)
+	for (int index = 0; index < ls.getPoints(); index++)
 	{
-		newXCord[index] = ls.xCord[index];
-		newYCord[index] = ls.yCord[index];
+		newXCord[index] = ls.getXcord()[index];
+		newYCord[index] = ls.getYcord()[index];
 	}
 
-	for (int index = ls.nrOfPoints; index < newVerticesAmount; index++)
+	for (int index = ls.getPoints(); index < newVerticesAmount; index++)
 	{
-		newXCord[index] = rs.xCord[i];
-		newYCord[index] = rs.yCord[i];
+		newXCord[index] = rs.getXcord()[i];
+		newYCord[index] = rs.getYcord()[i];
 		i++;
 	}
 

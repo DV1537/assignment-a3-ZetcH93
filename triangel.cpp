@@ -101,3 +101,16 @@ Triangel& Triangel::operator=(const Triangel &triangle)
 	return *this;
 
 }
+
+double *Triangel::getXcord()
+{
+	return this->xCord;
+}
+double *Triangel::getYcord()
+{
+	return this->yCord;
+}
+int Triangel::getPoints()
+{
+	return this->nrOfPoints;
+}

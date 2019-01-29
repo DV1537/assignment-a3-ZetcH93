@@ -65,3 +65,16 @@ Line& Line::operator=(const Line &line)
 	return *this;
 }
 
+double *Line::getXcord()
+{
+	return this->xCord;
+}
+double *Line::getYcord()
+{
+	return this->yCord;
+}
+int Line::getPoints()
+{
+	return this->nrOfPoints;
+}
+

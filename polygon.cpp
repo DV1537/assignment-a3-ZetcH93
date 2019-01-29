@@ -155,3 +155,16 @@ Polygon& Polygon::operator=(const Polygon &polygon)
 	return *this;
 }
 
+
+double *Polygon::getXcord()
+{
+	return this->xCord;
+}
+double *Polygon::getYcord()
+{
+	return this->yCord;
+}
+int Polygon::getPoints()
+{
+	return this->nrOfPoints;
+}

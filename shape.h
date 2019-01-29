@@ -4,6 +4,8 @@
 #include <string>
 #include <cmath>
 #include <fstream>
+
+
 using namespace std;
 
 
@@ -18,11 +20,17 @@ struct ShapePosition
 class Shape
 {
 
-public:
-	
 	double *xCord = nullptr;
 	double *yCord = nullptr;
 	int nrOfPoints = 0;
+
+public:
+
+
+	virtual double *getXcord();
+	virtual double *getYcord();
+	virtual int getPoints();
+
 
 	virtual ~Shape();
 	virtual string getType() = 0;	// returns a string denoting the type of a shape(point, line, polygon ..);

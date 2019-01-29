@@ -62,4 +62,16 @@ Point& Point::operator=(const Point& point)
 	return *this;
 }
 
+double *Point::getXcord()
+{
+	return this->xCord;
+}
+double *Point::getYcord()
+{
+	return this->yCord;
+}
+int Point::getPoints()
+{
+	return this->nrOfPoints;
+}
 

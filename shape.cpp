@@ -88,3 +88,16 @@ ostream &operator<<(std::ostream &streamobj, const Shape &shape)
 	}
 	return streamobj;
 }
+
+double *Shape::getXcord()
+{
+	return this->xCord;
+}
+double *Shape::getYcord()
+{
+	return this->yCord;
+}
+int Shape::getPoints()
+{
+	return this->nrOfPoints;
+}
